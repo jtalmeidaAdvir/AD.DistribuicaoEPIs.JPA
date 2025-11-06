@@ -1,0 +1,6 @@
+C:\Users\jtalm\source\repos\AD.DistribuicaoEPIs.JPA\AD.DistribuicaoEPIs.JPA\bin\Debug\AD.DistribuicaoEPIs.JPA.dll
+C:\Users\jtalm\source\repos\AD.DistribuicaoEPIs.JPA\AD.DistribuicaoEPIs.JPA\bin\Debug\AD.DistribuicaoEPIs.JPA.pdb
+C:\Users\jtalm\source\repos\AD.DistribuicaoEPIs.JPA\AD.DistribuicaoEPIs.JPA\obj\Debug\AD.DistribuicaoEPIs.JPA.csproj.AssemblyReference.cache
+C:\Users\jtalm\source\repos\AD.DistribuicaoEPIs.JPA\AD.DistribuicaoEPIs.JPA\obj\Debug\AD.DistribuicaoEPIs.JPA.csproj.CoreCompileInputs.cache
+C:\Users\jtalm\source\repos\AD.DistribuicaoEPIs.JPA\AD.DistribuicaoEPIs.JPA\obj\Debug\AD.DistribuicaoEPIs.JPA.dll
+C:\Users\jtalm\source\repos\AD.DistribuicaoEPIs.JPA\AD.DistribuicaoEPIs.JPA\obj\Debug\AD.DistribuicaoEPIs.JPA.pdb
