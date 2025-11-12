@@ -2,8 +2,10 @@
 using IntBE100;
 using Primavera.Extensibility.BusinessEntities;
 using Primavera.Extensibility.CustomForm;
+using StdPlatBS100;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -71,8 +73,9 @@ namespace AD.DistribuicaoEPIs.JPA
                         txtColaborador.Text = seletor.CodigoSelecionado;
                         txtNomeColaborador.Text = seletor.NomeSelecionado;
 
-                        // Habilitar o botão de consultar EPIs
+                        // Habilitar o botão de consultar EPIs e Imprimir
                         btnConsultarEPIs.Enabled = true;
+                        btnImprimir.Enabled = true;
                     }
                 }
             }
@@ -348,5 +351,134 @@ namespace AD.DistribuicaoEPIs.JPA
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Validar se há colaborador selecionado
+                if (string.IsNullOrWhiteSpace(txtColaborador.Text))
+                {
+                    MessageBox.Show("Por favor, selecione um colaborador primeiro.", "Atenção",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Buscar o último documento EEPI do colaborador
+                string queryUltimoDoc = @"
+            SELECT TOP 1
+                CabecInternos.NumDoc,
+                CabecInternos.Serie
+            FROM CabecInternos WITH (NOLOCK)
+            INNER JOIN LinhasInternos WITH (NOLOCK) 
+                ON CabecInternos.Id = LinhasInternos.IdCabecInternos
+            WHERE 
+                CabecInternos.TipoDoc = 'EEPI'
+                AND LinhasInternos.CDU_CodigoFunc = '" + txtColaborador.Text + @"'
+            ORDER BY 
+                CabecInternos.Data DESC,
+                CabecInternos.NumDoc DESC";
+
+                var resultadoDoc = BSO.Consulta(queryUltimoDoc);
+
+                if (resultadoDoc == null || resultadoDoc.Vazia())
+                {
+                    MessageBox.Show("Não foi encontrado nenhum documento de EPIs para este colaborador.", "Informação",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+
+                int numDoc = Convert.ToInt32(resultadoDoc.Valor("NumDoc"));
+                string serie = resultadoDoc.Valor("Serie").ToString();
+
+                // Mostrar loading
+                LoadingForm loadingForm = new LoadingForm("A gerar PDF");
+                loadingForm.Show();
+                this.Enabled = false;
+                Application.DoEvents();
+
+                try
+                {
+                    // Inicializar impressão
+                    this.PSO.Mapas.Inicializar("ERP");
+                    this.PSO.Mapas.Destino = StdBSTipos.CRPEExportDestino.edFicheiro;
+                    this.PSO.Mapas.TipoFolha = StdBSTipos.CRPETipoFolha.tfA4;
+
+                    // ✅ Definir caminho completo do ficheiro PDF
+                    string pasta = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+                    string nomeArquivo = Path.Combine(
+                        pasta,
+                        $"EPI_{txtColaborador.Text}_{serie}_{numDoc}_{DateTime.Now:yyyyMMdd_HHmmss}.pdf"
+                    );
+
+                    this.PSO.Mapas.SetFileProp(StdBSTipos.CRPEExportFormat.efPdf, nomeArquivo);
+                    this.PSO.Mapas.MostraErros = true;
+
+                    // Query SQL para o mapa
+                    var sqlquery = @"
+                SELECT 
+                    LinhasInternos.Artigo, 
+                    LinhasInternos.Descricao, 
+                    LinhasInternos.Quantidade, 
+                    LinhasInternos.DataEntrega, 
+                    CabecInternos.TipoDoc, 
+                    CabecInternos.NumDoc, 
+                    CabecInternos.Serie, 
+                    Funcionarios.Nome, 
+                    Funcionarios.Codigo, 
+                    Categorias.Descricao AS CategoriaDescricao
+                FROM LinhasInternos WITH (NOLOCK) 
+                    INNER JOIN CabecInternos WITH (NOLOCK) 
+                        ON LinhasInternos.IdCabecInternos = CabecInternos.Id
+                    INNER JOIN Funcionarios WITH (NOLOCK) 
+                        ON LinhasInternos.CDU_CodigoFunc = Funcionarios.Codigo
+                    INNER JOIN Categorias WITH (NOLOCK) 
+                        ON Funcionarios.Categoria = Categorias.Categoria
+                WHERE 
+                    CabecInternos.NumDoc = " + numDoc + @" 
+                    AND CabecInternos.Serie = N'" + serie + @"'
+                ORDER BY LinhasInternos.NumLinha";
+
+                    this.PSO.Mapas.SetParametro("NumDoc", numDoc);
+                    this.PSO.Mapas.SetParametro("serie", serie);
+
+                    int imprimeMapa = this.PSO.Mapas.ImprimeListagem(
+                        "EPIS00", "Documento", "P", 1, "N", "", 0, false, false, sqlquery
+                    );
+
+                    loadingForm.Close();
+                    this.Enabled = true;
+
+                    // ✅ Abrir o PDF automaticamente
+                    if (System.IO.File.Exists(nomeArquivo))
+                    {
+                        System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo()
+                        {
+                            FileName = nomeArquivo,
+                            UseShellExecute = true
+                        });
+                    }
+
+                    MessageBox.Show(
+                        $"PDF gerado com sucesso!\n\nDocumento: {serie}/{numDoc}\nColaborador: {txtColaborador.Text} - {txtNomeColaborador.Text}\n\nLocal:\n{nomeArquivo}",
+                        "Sucesso",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information
+                    );
+                }
+                catch
+                {
+                    loadingForm.Close();
+                    this.Enabled = true;
+                    throw;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao imprimir mapa: {ex.Message}\n\nDetalhes: {ex.StackTrace}", "Erro",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
     }
 }

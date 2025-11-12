@@ -8,3 +8,4 @@ C:\Users\jtalm\source\repos\AD.DistribuicaoEPIs.JPA\AD.DistribuicaoEPIs.JPA\obj\
 C:\Users\jtalm\source\repos\AD.DistribuicaoEPIs.JPA\AD.DistribuicaoEPIs.JPA\obj\Debug\AD.DistribuicaoEPIs.JPA.csproj.GenerateResource.cache
 C:\Users\jtalm\source\repos\AD.DistribuicaoEPIs.JPA\AD.DistribuicaoEPIs.JPA\bin\Debug\BasBE100.dll
 C:\Users\jtalm\source\repos\AD.DistribuicaoEPIs.JPA\AD.DistribuicaoEPIs.JPA\obj\Debug\AD.Distr.53219FE3.Up2Date
+C:\Users\jtalm\source\repos\AD.DistribuicaoEPIs.JPA\AD.DistribuicaoEPIs.JPA\bin\Debug\ErpDS100.dll

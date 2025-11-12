@@ -33,8 +33,8 @@ namespace AD.DistribuicaoEPIs.JPA
             this.groupBoxColaborador = new System.Windows.Forms.GroupBox();
             this.txtNomeColaborador = new System.Windows.Forms.TextBox();
             this.lblNomeColaborador = new System.Windows.Forms.Label();
-            this.btnProcurarColaborador = new System.Windows.Forms.Button();
             this.btnConsultarEPIs = new System.Windows.Forms.Button();
+            this.btnProcurarColaborador = new System.Windows.Forms.Button();
             this.txtColaborador = new System.Windows.Forms.TextBox();
             this.lblColaborador = new System.Windows.Forms.Label();
             this.groupBoxEPIs = new System.Windows.Forms.GroupBox();
@@ -61,6 +61,7 @@ namespace AD.DistribuicaoEPIs.JPA
             this.dtpDataEntrega = new System.Windows.Forms.DateTimePicker();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnImprimir = new System.Windows.Forms.Button();
             this.groupBoxColaborador.SuspendLayout();
             this.groupBoxEPIs.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numEPI006)).BeginInit();
@@ -111,20 +112,6 @@ namespace AD.DistribuicaoEPIs.JPA
             this.lblNomeColaborador.TabIndex = 3;
             this.lblNomeColaborador.Text = "Nome:";
             // 
-            // btnProcurarColaborador
-            // 
-            this.btnProcurarColaborador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btnProcurarColaborador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProcurarColaborador.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProcurarColaborador.ForeColor = System.Drawing.Color.White;
-            this.btnProcurarColaborador.Location = new System.Drawing.Point(275, 28);
-            this.btnProcurarColaborador.Name = "btnProcurarColaborador";
-            this.btnProcurarColaborador.Size = new System.Drawing.Size(100, 28);
-            this.btnProcurarColaborador.TabIndex = 2;
-            this.btnProcurarColaborador.Text = "🔍 Procurar";
-            this.btnProcurarColaborador.UseVisualStyleBackColor = false;
-            this.btnProcurarColaborador.Click += new System.EventHandler(this.btnProcurarColaborador_Click);
-            // 
             // btnConsultarEPIs
             // 
             this.btnConsultarEPIs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
@@ -139,6 +126,20 @@ namespace AD.DistribuicaoEPIs.JPA
             this.btnConsultarEPIs.Text = "📋 Consultar EPIs";
             this.btnConsultarEPIs.UseVisualStyleBackColor = false;
             this.btnConsultarEPIs.Click += new System.EventHandler(this.btnConsultarEPIs_Click);
+            // 
+            // btnProcurarColaborador
+            // 
+            this.btnProcurarColaborador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btnProcurarColaborador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProcurarColaborador.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProcurarColaborador.ForeColor = System.Drawing.Color.White;
+            this.btnProcurarColaborador.Location = new System.Drawing.Point(275, 28);
+            this.btnProcurarColaborador.Name = "btnProcurarColaborador";
+            this.btnProcurarColaborador.Size = new System.Drawing.Size(100, 28);
+            this.btnProcurarColaborador.TabIndex = 2;
+            this.btnProcurarColaborador.Text = "🔍 Procurar";
+            this.btnProcurarColaborador.UseVisualStyleBackColor = false;
+            this.btnProcurarColaborador.Click += new System.EventHandler(this.btnProcurarColaborador_Click);
             // 
             // txtColaborador
             // 
@@ -493,11 +494,27 @@ namespace AD.DistribuicaoEPIs.JPA
             this.btnCancelar.Text = "✗ Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             // 
+            // btnImprimir
+            // 
+            this.btnImprimir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
+            this.btnImprimir.Enabled = false;
+            this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImprimir.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnImprimir.ForeColor = System.Drawing.Color.White;
+            this.btnImprimir.Location = new System.Drawing.Point(20, 490);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(120, 38);
+            this.btnImprimir.TabIndex = 5;
+            this.btnImprimir.Text = "🖨️ Imprimir";
+            this.btnImprimir.UseVisualStyleBackColor = false;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
+            // 
             // EditorDistribuicaoEPIs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.groupBoxDataEntrega);
@@ -559,5 +576,6 @@ namespace AD.DistribuicaoEPIs.JPA
         private System.Windows.Forms.DateTimePicker dtpDataEntrega;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnImprimir;
     }
 }

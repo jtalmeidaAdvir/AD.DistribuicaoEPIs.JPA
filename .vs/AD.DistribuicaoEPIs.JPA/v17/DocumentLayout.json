@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\jtalm\\source\\repos\\AD.DistribuicaoEPIs.JPA\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3EF1D720-332C-4E79-817D-F3B4BBD23339}|AD.DistribuicaoEPIs.JPA\\AD.DistribuicaoEPIs.JPA.csproj|C:\\Users\\jtalm\\source\\repos\\AD.DistribuicaoEPIs.JPA\\ad.distribuicaoepis.jpa\\editordistribuicaoepis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EF1D720-332C-4E79-817D-F3B4BBD23339}|AD.DistribuicaoEPIs.JPA\\AD.DistribuicaoEPIs.JPA.csproj|solutionrelative:ad.distribuicaoepis.jpa\\editordistribuicaoepis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EF1D720-332C-4E79-817D-F3B4BBD23339}|AD.DistribuicaoEPIs.JPA\\AD.DistribuicaoEPIs.JPA.csproj|C:\\Users\\jtalm\\source\\repos\\AD.DistribuicaoEPIs.JPA\\ad.distribuicaoepis.jpa\\editordistribuicaoepis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3EF1D720-332C-4E79-817D-F3B4BBD23339}|AD.DistribuicaoEPIs.JPA\\AD.DistribuicaoEPIs.JPA.csproj|solutionrelative:ad.distribuicaoepis.jpa\\editordistribuicaoepis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EF1D720-332C-4E79-817D-F3B4BBD23339}|AD.DistribuicaoEPIs.JPA\\AD.DistribuicaoEPIs.JPA.csproj|C:\\Users\\jtalm\\source\\repos\\AD.DistribuicaoEPIs.JPA\\ad.distribuicaoepis.jpa\\editordistribuicaoepis.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EF1D720-332C-4E79-817D-F3B4BBD23339}|AD.DistribuicaoEPIs.JPA\\AD.DistribuicaoEPIs.JPA.csproj|solutionrelative:ad.distribuicaoepis.jpa\\editordistribuicaoepis.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3EF1D720-332C-4E79-817D-F3B4BBD23339}|AD.DistribuicaoEPIs.JPA\\AD.DistribuicaoEPIs.JPA.csproj|c:\\users\\jtalm\\source\\repos\\ad.distribuicaoepis.jpa\\ad.distribuicaoepis.jpa\\historicoepisform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3EF1D720-332C-4E79-817D-F3B4BBD23339}|AD.DistribuicaoEPIs.JPA\\AD.DistribuicaoEPIs.JPA.csproj|solutionrelative:ad.distribuicaoepis.jpa\\historicoepisform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,20 +27,8 @@
       "RelativeMoniker": "D:0:0:{3EF1D720-332C-4E79-817D-F3B4BBD23339}|AD.DistribuicaoEPIs.JPA\\AD.DistribuicaoEPIs.JPA.csproj|solutionrelative:ad.distribuicaoepis.jpa\\loadingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3EF1D720-332C-4E79-817D-F3B4BBD23339}|AD.DistribuicaoEPIs.JPA\\AD.DistribuicaoEPIs.JPA.csproj|C:\\Users\\jtalm\\source\\repos\\AD.DistribuicaoEPIs.JPA\\ad.distribuicaoepis.jpa\\editordistribuicaoepis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3EF1D720-332C-4E79-817D-F3B4BBD23339}|AD.DistribuicaoEPIs.JPA\\AD.DistribuicaoEPIs.JPA.csproj|solutionrelative:ad.distribuicaoepis.jpa\\editordistribuicaoepis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3EF1D720-332C-4E79-817D-F3B4BBD23339}|AD.DistribuicaoEPIs.JPA\\AD.DistribuicaoEPIs.JPA.csproj|C:\\Users\\jtalm\\source\\repos\\AD.DistribuicaoEPIs.JPA\\ad.distribuicaoepis.jpa\\editordistribuicaoepis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{3EF1D720-332C-4E79-817D-F3B4BBD23339}|AD.DistribuicaoEPIs.JPA\\AD.DistribuicaoEPIs.JPA.csproj|solutionrelative:ad.distribuicaoepis.jpa\\editordistribuicaoepis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3EF1D720-332C-4E79-817D-F3B4BBD23339}|AD.DistribuicaoEPIs.JPA\\AD.DistribuicaoEPIs.JPA.csproj|C:\\Users\\jtalm\\source\\repos\\AD.DistribuicaoEPIs.JPA\\ad.distribuicaoepis.jpa\\historicoepisform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3EF1D720-332C-4E79-817D-F3B4BBD23339}|AD.DistribuicaoEPIs.JPA\\AD.DistribuicaoEPIs.JPA.csproj|solutionrelative:ad.distribuicaoepis.jpa\\historicoepisform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3EF1D720-332C-4E79-817D-F3B4BBD23339}|AD.DistribuicaoEPIs.JPA\\AD.DistribuicaoEPIs.JPA.csproj|C:\\Users\\jtalm\\source\\repos\\AD.DistribuicaoEPIs.JPA\\ad.distribuicaoepis.jpa\\editordistribuicaoepis.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3EF1D720-332C-4E79-817D-F3B4BBD23339}|AD.DistribuicaoEPIs.JPA\\AD.DistribuicaoEPIs.JPA.csproj|solutionrelative:ad.distribuicaoepis.jpa\\editordistribuicaoepis.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3EF1D720-332C-4E79-817D-F3B4BBD23339}|AD.DistribuicaoEPIs.JPA\\AD.DistribuicaoEPIs.JPA.csproj|C:\\Users\\jtalm\\source\\repos\\AD.DistribuicaoEPIs.JPA\\ad.distribuicaoepis.jpa\\seletorfuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -50,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,7 +58,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "HistoricoEPIsForm.cs",
               "DocumentMoniker": "C:\\Users\\jtalm\\source\\repos\\AD.DistribuicaoEPIs.JPA\\AD.DistribuicaoEPIs.JPA\\HistoricoEPIsForm.cs",
               "RelativeDocumentMoniker": "AD.DistribuicaoEPIs.JPA\\HistoricoEPIsForm.cs",
@@ -71,42 +71,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LoadingForm.cs",
-              "DocumentMoniker": "C:\\Users\\jtalm\\source\\repos\\AD.DistribuicaoEPIs.JPA\\AD.DistribuicaoEPIs.JPA\\LoadingForm.cs",
-              "RelativeDocumentMoniker": "AD.DistribuicaoEPIs.JPA\\LoadingForm.cs",
-              "ToolTip": "C:\\Users\\jtalm\\source\\repos\\AD.DistribuicaoEPIs.JPA\\AD.DistribuicaoEPIs.JPA\\LoadingForm.cs",
-              "RelativeToolTip": "AD.DistribuicaoEPIs.JPA\\LoadingForm.cs",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAQwGgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T10:55:21.863Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "EditorDistribuicaoEPIs.cs [Design]",
               "DocumentMoniker": "C:\\Users\\jtalm\\source\\repos\\AD.DistribuicaoEPIs.JPA\\AD.DistribuicaoEPIs.JPA\\EditorDistribuicaoEPIs.cs",
               "RelativeDocumentMoniker": "AD.DistribuicaoEPIs.JPA\\EditorDistribuicaoEPIs.cs",
               "ToolTip": "C:\\Users\\jtalm\\source\\repos\\AD.DistribuicaoEPIs.JPA\\AD.DistribuicaoEPIs.JPA\\EditorDistribuicaoEPIs.cs [Design]",
               "RelativeToolTip": "AD.DistribuicaoEPIs.JPA\\EditorDistribuicaoEPIs.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T16:23:12.222Z"
+              "WhenOpened": "2025-11-06T16:23:12.222Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "EditorDistribuicaoEPIs.cs",
               "DocumentMoniker": "C:\\Users\\jtalm\\source\\repos\\AD.DistribuicaoEPIs.JPA\\AD.DistribuicaoEPIs.JPA\\EditorDistribuicaoEPIs.cs",
               "RelativeDocumentMoniker": "AD.DistribuicaoEPIs.JPA\\EditorDistribuicaoEPIs.cs",
               "ToolTip": "C:\\Users\\jtalm\\source\\repos\\AD.DistribuicaoEPIs.JPA\\AD.DistribuicaoEPIs.JPA\\EditorDistribuicaoEPIs.cs",
               "RelativeToolTip": "AD.DistribuicaoEPIs.JPA\\EditorDistribuicaoEPIs.cs",
-              "ViewState": "AgIAAD8BAAAAAAAAAAAQwGABAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAMABAAAAAAAAAAAQwOEBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T16:16:09.658Z"
+              "WhenOpened": "2025-11-06T16:16:09.658Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "HistoricoEPIsForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\jtalm\\source\\repos\\AD.DistribuicaoEPIs.JPA\\AD.DistribuicaoEPIs.JPA\\HistoricoEPIsForm.Designer.cs",
               "RelativeDocumentMoniker": "AD.DistribuicaoEPIs.JPA\\HistoricoEPIsForm.Designer.cs",
@@ -118,7 +108,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "HistoricoEPIsForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\jtalm\\source\\repos\\AD.DistribuicaoEPIs.JPA\\AD.DistribuicaoEPIs.JPA\\HistoricoEPIsForm.cs",
               "RelativeDocumentMoniker": "AD.DistribuicaoEPIs.JPA\\HistoricoEPIsForm.cs",
@@ -129,15 +119,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "EditorDistribuicaoEPIs.Designer.cs",
               "DocumentMoniker": "C:\\Users\\jtalm\\source\\repos\\AD.DistribuicaoEPIs.JPA\\AD.DistribuicaoEPIs.JPA\\EditorDistribuicaoEPIs.Designer.cs",
               "RelativeDocumentMoniker": "AD.DistribuicaoEPIs.JPA\\EditorDistribuicaoEPIs.Designer.cs",
               "ToolTip": "C:\\Users\\jtalm\\source\\repos\\AD.DistribuicaoEPIs.JPA\\AD.DistribuicaoEPIs.JPA\\EditorDistribuicaoEPIs.Designer.cs",
               "RelativeToolTip": "AD.DistribuicaoEPIs.JPA\\EditorDistribuicaoEPIs.Designer.cs",
-              "ViewState": "AgIAABICAAAAAAAAAAAQwCECAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAACQCAAAAAAAAAAAQwEUCAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T16:23:00.997Z"
+              "WhenOpened": "2025-11-06T16:23:00.997Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LoadingForm.cs",
+              "DocumentMoniker": "C:\\Users\\jtalm\\source\\repos\\AD.DistribuicaoEPIs.JPA\\AD.DistribuicaoEPIs.JPA\\LoadingForm.cs",
+              "RelativeDocumentMoniker": "AD.DistribuicaoEPIs.JPA\\LoadingForm.cs",
+              "ToolTip": "C:\\Users\\jtalm\\source\\repos\\AD.DistribuicaoEPIs.JPA\\AD.DistribuicaoEPIs.JPA\\LoadingForm.cs",
+              "RelativeToolTip": "AD.DistribuicaoEPIs.JPA\\LoadingForm.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAQwGgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T10:55:21.863Z"
             },
             {
               "$type": "Bookmark",
