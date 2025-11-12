@@ -34,6 +34,7 @@ namespace AD.DistribuicaoEPIs.JPA
             this.txtNomeColaborador = new System.Windows.Forms.TextBox();
             this.lblNomeColaborador = new System.Windows.Forms.Label();
             this.btnProcurarColaborador = new System.Windows.Forms.Button();
+            this.btnConsultarEPIs = new System.Windows.Forms.Button();
             this.txtColaborador = new System.Windows.Forms.TextBox();
             this.lblColaborador = new System.Windows.Forms.Label();
             this.groupBoxEPIs = new System.Windows.Forms.GroupBox();
@@ -75,6 +76,7 @@ namespace AD.DistribuicaoEPIs.JPA
             // 
             this.groupBoxColaborador.Controls.Add(this.txtNomeColaborador);
             this.groupBoxColaborador.Controls.Add(this.lblNomeColaborador);
+            this.groupBoxColaborador.Controls.Add(this.btnConsultarEPIs);
             this.groupBoxColaborador.Controls.Add(this.btnProcurarColaborador);
             this.groupBoxColaborador.Controls.Add(this.txtColaborador);
             this.groupBoxColaborador.Controls.Add(this.lblColaborador);
@@ -122,6 +124,21 @@ namespace AD.DistribuicaoEPIs.JPA
             this.btnProcurarColaborador.Text = "🔍 Procurar";
             this.btnProcurarColaborador.UseVisualStyleBackColor = false;
             this.btnProcurarColaborador.Click += new System.EventHandler(this.btnProcurarColaborador_Click);
+            // 
+            // btnConsultarEPIs
+            // 
+            this.btnConsultarEPIs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
+            this.btnConsultarEPIs.Enabled = false;
+            this.btnConsultarEPIs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarEPIs.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarEPIs.ForeColor = System.Drawing.Color.White;
+            this.btnConsultarEPIs.Location = new System.Drawing.Point(385, 28);
+            this.btnConsultarEPIs.Name = "btnConsultarEPIs";
+            this.btnConsultarEPIs.Size = new System.Drawing.Size(130, 28);
+            this.btnConsultarEPIs.TabIndex = 5;
+            this.btnConsultarEPIs.Text = "📋 Consultar EPIs";
+            this.btnConsultarEPIs.UseVisualStyleBackColor = false;
+            this.btnConsultarEPIs.Click += new System.EventHandler(this.btnConsultarEPIs_Click);
             // 
             // txtColaborador
             // 
@@ -515,6 +532,7 @@ namespace AD.DistribuicaoEPIs.JPA
         private System.Windows.Forms.TextBox txtNomeColaborador;
         private System.Windows.Forms.Label lblNomeColaborador;
         private System.Windows.Forms.Button btnProcurarColaborador;
+        private System.Windows.Forms.Button btnConsultarEPIs;
         private System.Windows.Forms.TextBox txtColaborador;
         private System.Windows.Forms.Label lblColaborador;
         private System.Windows.Forms.GroupBox groupBoxEPIs;

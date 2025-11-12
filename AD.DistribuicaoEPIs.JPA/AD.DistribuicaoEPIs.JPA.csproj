@@ -97,6 +97,12 @@
     <Compile Include="EditorDistribuicaoEPIs.Designer.cs">
       <DependentUpon>EditorDistribuicaoEPIs.cs</DependentUpon>
     </Compile>
+    <Compile Include="HistoricoEPIsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HistoricoEPIsForm.Designer.cs">
+      <DependentUpon>HistoricoEPIsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SeletorFuncionario.cs">
       <SubType>Form</SubType>
