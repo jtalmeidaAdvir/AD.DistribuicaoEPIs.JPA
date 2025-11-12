@@ -251,77 +251,96 @@ namespace AD.DistribuicaoEPIs.JPA
                     return;
                 }
 
-
-
                 // Criar um Documento Interno
                 IntBEDocumentoInterno novoDocumento = new IntBEDocumentoInterno();
                 novoDocumento.Tipodoc = "EEPI";
-                BSO.Internos.Documentos.PreencheDadosRelacionados(novoDocumento);
-                //data de hoje
-                int linha = 0;
-                novoDocumento.DataVencimento = DateTime.Now;
-                // Adicionar linha para cada EPI selecionado
-                if (chkEPI001.Checked && numEPI001.Value > 0)
+
+                // Mostrar loading antes de processar
+                LoadingForm loadingForm = new LoadingForm("A guardar documento");
+                loadingForm.Show();
+                this.Enabled = false; // Desabilitar o formulário principal
+                Application.DoEvents();
+
+                try
                 {
-                    linha++;
-                    var linhaPrenchida = BSO.Internos.Documentos.AdicionaLinha(novoDocumento, "EPI001");
-                    linhaPrenchida.Linhas.GetEdita(linha).DataEntrega = dtpDataEntrega.Value;
-                    linhaPrenchida.Linhas.GetEdita(linha).Quantidade = (double)numEPI001.Value;
-                    linhaPrenchida.Linhas.GetEdita(linha).CamposUtil["CDU_CodigoFunc"].Valor = txtColaborador.Text;
-                }
+                    BSO.Internos.Documentos.PreencheDadosRelacionados(novoDocumento);
+                    //data de hoje
+                    int linha = 0;
+                    novoDocumento.DataVencimento = DateTime.Now;
+                    // Adicionar linha para cada EPI selecionado
+                    if (chkEPI001.Checked && numEPI001.Value > 0)
+                    {
+                        linha++;
+                        var linhaPrenchida = BSO.Internos.Documentos.AdicionaLinha(novoDocumento, "EPI001");
+                        linhaPrenchida.Linhas.GetEdita(linha).DataEntrega = dtpDataEntrega.Value;
+                        linhaPrenchida.Linhas.GetEdita(linha).Quantidade = (double)numEPI001.Value;
+                        linhaPrenchida.Linhas.GetEdita(linha).CamposUtil["CDU_CodigoFunc"].Valor = txtColaborador.Text;
+                    }
 
-                if (chkEPI002.Checked && numEPI002.Value > 0)
+                    if (chkEPI002.Checked && numEPI002.Value > 0)
+                    {
+                        linha++;
+                        var linhaPrenchida = BSO.Internos.Documentos.AdicionaLinha(novoDocumento, "EPI002");
+                        linhaPrenchida.Linhas.GetEdita(linha).DataEntrega = dtpDataEntrega.Value;
+                        linhaPrenchida.Linhas.GetEdita(linha).Quantidade = (double)numEPI002.Value;
+                        linhaPrenchida.Linhas.GetEdita(linha).CamposUtil["CDU_CodigoFunc"].Valor = txtColaborador.Text;
+                    }
+
+                    if (chkEPI003.Checked && numEPI003.Value > 0)
+                    {
+                        linha++;
+                        var linhaPrenchida = BSO.Internos.Documentos.AdicionaLinha(novoDocumento, "EPI003");
+                        linhaPrenchida.Linhas.GetEdita(linha).DataEntrega = dtpDataEntrega.Value;
+                        linhaPrenchida.Linhas.GetEdita(linha).Quantidade = (double)numEPI003.Value;
+                        linhaPrenchida.Linhas.GetEdita(linha).CamposUtil["CDU_CodigoFunc"].Valor = txtColaborador.Text;
+                    }
+
+                    if (chkEPI004.Checked && numEPI004.Value > 0)
+                    {
+                        linha++;
+                        var linhaPrenchida = BSO.Internos.Documentos.AdicionaLinha(novoDocumento, "EPI004");
+                        linhaPrenchida.Linhas.GetEdita(linha).DataEntrega = dtpDataEntrega.Value;
+                        linhaPrenchida.Linhas.GetEdita(linha).Quantidade = (double)numEPI004.Value;
+                        linhaPrenchida.Linhas.GetEdita(linha).CamposUtil["CDU_CodigoFunc"].Valor = txtColaborador.Text;
+                    }
+
+                    if (chkEPI005.Checked && numEPI005.Value > 0)
+                    {
+                        linha++;
+                        var linhaPrenchida = BSO.Internos.Documentos.AdicionaLinha(novoDocumento, "EPI005");
+                        linhaPrenchida.Linhas.GetEdita(linha).DataEntrega = dtpDataEntrega.Value;
+                        linhaPrenchida.Linhas.GetEdita(linha).Quantidade = (double)numEPI005.Value;
+                        linhaPrenchida.Linhas.GetEdita(linha).CamposUtil["CDU_CodigoFunc"].Valor = txtColaborador.Text;
+                    }
+
+                    if (chkEPI006.Checked && numEPI006.Value > 0)
+                    {
+                        linha++;
+                        var linhaPrenchida = BSO.Internos.Documentos.AdicionaLinha(novoDocumento, "EPI006");
+                        linhaPrenchida.Linhas.GetEdita(linha).DataEntrega = dtpDataEntrega.Value;
+                        linhaPrenchida.Linhas.GetEdita(linha).Quantidade = (double)numEPI006.Value;
+                        linhaPrenchida.Linhas.GetEdita(linha).CamposUtil["CDU_CodigoFunc"].Valor = txtColaborador.Text;
+                    }
+
+                    // Atualizar e gravar o documento
+                    Application.DoEvents(); // Manter o loading visível
+                    BSO.Internos.Documentos.Actualiza(novoDocumento);
+
+                    // Fechar loading e reabilitar formulário
+                    loadingForm.Close();
+                    this.Enabled = true;
+
+                    // Mostrar mensagem com todos os dados
+                    MessageBox.Show(mensagem.ToString() + $"\n\nDocumento {novoDocumento.Tipodoc}/{novoDocumento.Serie}/{novoDocumento.NumDoc} criado com sucesso!",
+                        "Dados da Distribuição",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch
                 {
-                    linha++;
-                    var linhaPrenchida = BSO.Internos.Documentos.AdicionaLinha(novoDocumento, "EPI002");
-                    linhaPrenchida.Linhas.GetEdita(linha).DataEntrega = dtpDataEntrega.Value;
-                    linhaPrenchida.Linhas.GetEdita(linha).Quantidade = (double)numEPI002.Value;
-                    linhaPrenchida.Linhas.GetEdita(linha).CamposUtil["CDU_CodigoFunc"].Valor = txtColaborador.Text;
+                    loadingForm.Close();
+                    this.Enabled = true;
+                    throw;
                 }
-
-                if (chkEPI003.Checked && numEPI003.Value > 0)
-                {
-                    linha++;
-                    var linhaPrenchida = BSO.Internos.Documentos.AdicionaLinha(novoDocumento, "EPI003");
-                    linhaPrenchida.Linhas.GetEdita(linha).DataEntrega = dtpDataEntrega.Value;
-                    linhaPrenchida.Linhas.GetEdita(linha).Quantidade = (double)numEPI003.Value;
-                    linhaPrenchida.Linhas.GetEdita(linha).CamposUtil["CDU_CodigoFunc"].Valor = txtColaborador.Text;
-                }
-
-                if (chkEPI004.Checked && numEPI004.Value > 0)
-                {
-                    linha++;
-                    var linhaPrenchida = BSO.Internos.Documentos.AdicionaLinha(novoDocumento, "EPI004");
-                    linhaPrenchida.Linhas.GetEdita(linha).DataEntrega = dtpDataEntrega.Value;
-                    linhaPrenchida.Linhas.GetEdita(linha).Quantidade = (double)numEPI004.Value;
-                    linhaPrenchida.Linhas.GetEdita(linha).CamposUtil["CDU_CodigoFunc"].Valor = txtColaborador.Text;
-                }
-
-                if (chkEPI005.Checked && numEPI005.Value > 0)
-                {
-                    linha++;
-                    var linhaPrenchida = BSO.Internos.Documentos.AdicionaLinha(novoDocumento, "EPI005");
-                    linhaPrenchida.Linhas.GetEdita(linha).DataEntrega = dtpDataEntrega.Value;
-                    linhaPrenchida.Linhas.GetEdita(linha).Quantidade = (double)numEPI005.Value;
-                    linhaPrenchida.Linhas.GetEdita(linha).CamposUtil["CDU_CodigoFunc"].Valor = txtColaborador.Text;
-                }
-
-                if (chkEPI006.Checked && numEPI006.Value > 0)
-                {
-                    linha++;
-                    var linhaPrenchida = BSO.Internos.Documentos.AdicionaLinha(novoDocumento, "EPI006");
-                    linhaPrenchida.Linhas.GetEdita(linha).DataEntrega = dtpDataEntrega.Value;
-                    linhaPrenchida.Linhas.GetEdita(linha).Quantidade = (double)numEPI006.Value;
-                    linhaPrenchida.Linhas.GetEdita(linha).CamposUtil["CDU_CodigoFunc"].Valor = txtColaborador.Text;
-                }
-
-                // Atualizar e gravar o documento
-                BSO.Internos.Documentos.Actualiza(novoDocumento);
-
-                // Mostrar mensagem com todos os dados
-                MessageBox.Show(mensagem.ToString() + $"\n\nDocumento {novoDocumento.Tipodoc}/{novoDocumento.Serie}/{novoDocumento.NumDoc} criado com sucesso!",
-                    "Dados da Distribuição",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {

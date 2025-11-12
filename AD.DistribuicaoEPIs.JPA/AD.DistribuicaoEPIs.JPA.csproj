@@ -103,6 +103,9 @@
     <Compile Include="HistoricoEPIsForm.Designer.cs">
       <DependentUpon>HistoricoEPIsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoadingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SeletorFuncionario.cs">
       <SubType>Form</SubType>
